@@ -6,6 +6,7 @@ import org.scu_db.demo.model.Title;
 import org.scu_db.demo.service.BookService;
 import org.scu_db.demo.service.MemberService;
 import org.scu_db.demo.service.TitleService;
+import org.scu_db.demo.service.impl.BookServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,13 +30,13 @@ public class HomeworkController {
         //TODO:请完成相关代码实现下述查询要求：
         //查询所有被借走图书的Book_ID。(对应第2题)
         List<Integer> bookId;
-
+        bookId = bookService.findAllBorrowedBook();
         //------------在此之下写下执行代码--------------
 
 
 
         //-----------在此之上写下执行代码---------------
-        return null;//TODO:修改返回值为bookId
+        return bookId;
     }
 
     @RequestMapping("/2")
@@ -46,10 +47,10 @@ public class HomeworkController {
 
         //------------在此之下写下执行代码--------------
 
-
+        titles = bookService.findTargetTitle();
 
         //-----------在此之上写下执行代码---------------
-        return null;//TODO:修改返回值为titles
+        return titles;
     }
 
 
@@ -61,10 +62,10 @@ public class HomeworkController {
 
         //------------在此之下写下执行代码--------------
 
-
+        count = bookService.countCall123();
 
         //-----------在此之上写下执行代码---------------
-        return null;//TODO:修改返回值为books
+        return count;
     }
 
     @RequestMapping("/4")
@@ -74,9 +75,10 @@ public class HomeworkController {
         List<String> callnumbers;
         //------------在此之下写下执行代码--------------
 
+        callnumbers = bookService.findCallNumberLessThan2();
 
         //-----------在此之上写下执行代码---------------
-        return null;//TODO:修改返回值为books
+        return callnumbers;
     }
 
 
