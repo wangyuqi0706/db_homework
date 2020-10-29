@@ -9,6 +9,7 @@ public interface BookService {
     List<Book> findAllBooks();
     List<Book> findBookById(Integer Id);
     List<Book> findBookByIdUseSql(Integer Id);
+
     List<Integer> findAllBorrowedBook();
     List<Title> findTargetTitle();
     Integer countCall123();

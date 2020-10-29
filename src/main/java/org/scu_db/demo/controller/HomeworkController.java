@@ -30,10 +30,10 @@ public class HomeworkController {
         //TODO:请完成相关代码实现下述查询要求：
         //查询所有被借走图书的Book_ID。(对应第2题)
         List<Integer> bookId;
-        bookId = bookService.findAllBorrowedBook();
+
         //------------在此之下写下执行代码--------------
 
-
+        bookId = bookService.findAllBorrowedBook();
 
         //-----------在此之上写下执行代码---------------
         return bookId;
