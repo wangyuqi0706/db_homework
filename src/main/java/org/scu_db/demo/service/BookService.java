@@ -11,6 +11,7 @@ public interface BookService {
     List<Book> findBookByIdUseSql(Integer Id);
     Integer deleteBookById(Integer id);
     Integer updateBook(Book book, Integer method);
+
     List<Integer> findAllBorrowedBook();
     List<Title> findTargetTitle();
     Integer countCall123();
