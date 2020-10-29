@@ -37,6 +37,25 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
+    public List<Integer> findAllBorrowedBook() { return bookRepository.findAllBorrowedBook(); }
+
+    @Override
+    public List<Title> findTargetTitle() {
+        return bookRepository.findTargetTitle();
+    }
+
+    @Override
+    public Integer countCall123() {
+        return bookRepository.countCall123();
+    }
+
+    @Override
+    public List<String> findCallNumberLessThan2() {
+        return bookRepository.findCallNumberLessThan2();
+    }
+
+
+    @Override
     public Integer deleteBookById(Integer id) {
         bookRepository.deleteBookByBookId(id);
         return null;
