@@ -13,7 +13,6 @@ public interface BookService {
     Integer updateBook(Book book, Integer method);
 
     List<Integer> findAllBorrowedBook();
-    List<Title> findTargetTitle();
     Integer countCall123();
     List<String> findCallNumberLessThan2();
 

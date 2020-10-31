@@ -39,10 +39,6 @@ public class BookServiceImpl implements BookService {
     @Override
     public List<Integer> findAllBorrowedBook() { return bookRepository.findAllBorrowedBook(); }
 
-    @Override
-    public List<Title> findTargetTitle() {
-        return bookRepository.findTargetTitle();
-    }
 
     @Override
     public Integer countCall123() {

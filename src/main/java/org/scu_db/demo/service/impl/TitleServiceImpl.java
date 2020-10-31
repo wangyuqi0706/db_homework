@@ -10,8 +10,14 @@ import java.util.List;
 
 @Service(value = "TitleService")
 public class TitleServiceImpl implements TitleService {
+    @Override
+    public List<Title> findTargetTitle() {
+        return titleRepository.findTargetTitle();
+    }
+
     @Autowired
     private TitleRepository titleRepository;
+
 
 
 }
