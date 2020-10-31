@@ -47,7 +47,7 @@ public class HomeworkController {
 
         //------------在此之下写下执行代码--------------
 
-        titles = bookService.findTargetTitle();
+        titles = titleService.findTargetTitle();
 
         //-----------在此之上写下执行代码---------------
         return titles;

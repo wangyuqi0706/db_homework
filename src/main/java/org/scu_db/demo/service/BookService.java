@@ -11,7 +11,6 @@ public interface BookService {
     List<Book> findBookByIdUseSql(Integer Id);
 
     List<Integer> findAllBorrowedBook();
-    List<Title> findTargetTitle();
     Integer countCall123();
     List<String> findCallNumberLessThan2();
 
