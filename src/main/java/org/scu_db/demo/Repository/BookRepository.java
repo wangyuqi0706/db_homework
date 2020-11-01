@@ -20,9 +20,6 @@ public interface BookRepository extends JpaRepository<Book, Integer> {
     @Query(value = "select book_id from Book where borrowermemno is not null", nativeQuery = true)
     List<Integer> findAllBorrowedBook();
 
-    @Query(value = "SELECT * FROM Title WHERE CallNumber in (SELECT CallNumber FROM Book WHERE Name = 'Iliad' OR Name = 'Odyssey')", nativeQuery = true)
-    List<Title> findTargetTitle();
-
     @Query(value = "SELECT COUNT(callnumber) FROM Book WHERE callnumber = 'Call123'")
     Integer countCall123();
 
