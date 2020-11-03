@@ -16,4 +16,8 @@ public interface BookService {
     Integer countCall123();
     List<String> findCallNumberLessThan2();
 
+    List<Integer> findAllBorrowedBook();
+    Integer countCall123();
+    List<String> findCallNumberLessThan2();
+
 }
